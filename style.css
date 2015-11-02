@@ -1,0 +1,51 @@
+body {
+    background: black;
+    margin:0;
+    padding:0;
+    overflow-y:hidden;
+}
+.map-container {
+    height:800px;
+    width:1280px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+}
+.map {
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+}
+.gps {
+    border-radius: 50%;
+    background: white;
+    height:14px;
+    width:14px;
+    position: absolute;
+    top:219px;
+    left:226px;
+}
+
+.ring {
+    border: 2px solid white;
+    -webkit-border-radius: 30px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left:220.5px;
+    top:214px;
+    opacity: 0;
+}
+.ring:hover {
+    -webkit-animation: pulsate .75s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(1, 1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(2, 2); opacity: 0.0;}
+}
