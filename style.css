@@ -1,3 +1,6 @@
+* {
+    box-sizing:border-box;
+}
 body {
     background: black;
     margin:0;
@@ -29,18 +32,15 @@ body {
 .ring {
     border: 2px solid white;
     -webkit-border-radius: 30px;
-    height: 20px;
-    width: 20px;
-    left:-4.5px;
-    top:-4.5px;
+    height: 22px;
+    width: 22px;
+    left:-3.5px;
+    top:-3.5px;
     position: absolute;
     opacity: 0;
-}
-.ring:active, .ring:hover {
     -webkit-animation: pulsate .75s ease-out;
     -webkit-animation-iteration-count: infinite; 
     opacity: 0.0;
-    cursor:pointer;
 }
 @-webkit-keyframes pulsate {
     0% {-webkit-transform: scale(1, 1); opacity: 0.0;}
@@ -51,16 +51,98 @@ body {
 .houston {
     left:519px;
     top:559px;
+    z-index: 3;
 }
 .miramar {
     left:783px;
     top:618px;
 }
-.window {
+/*.window {
+    opacity: 0;
+    width:350px;
+    height:400px;
+    position: absolute;
+    top:278px;
+    left:960px;
+    background: lime;
+    z-index: 8;
+    padding: 15px;
+}
+#houston:hover .window {
+    opacity: 1;
+}*/
+.state {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition:.5s ease-in;
+    -moz-transition:.5s ease-in;
+    -webkit-transition:.5s ease-in;
+}
+#texas {
+    left: 433px;
+    top:441px;
+}
+#california {
+    left:117px;
+    top:223px;
+}
+#new-mexico {
+    left: 379px;
+    top:413px;
+}
+#washington {
+    left: 171px;
+    top:57px;
+}
+#oregon {
+    left: 133px;
+    top:121px;
+}
+#idaho {
+    left: 268px;
+    top:81px;
+}
+#nevada {
+    left: 193px;
+    top:245px;
+    z-index: 7;
+}
+#montana {
+    left: 319px;
+    top:85px;
+}
+#wyoming {
+    left: 375px;
+    top: 202px;
+}
+#utah {
+    left: 298px;
+    top: 269px;
+}
+#arizona {
+    left: 259px;
+    top: 397px;
+}
+#texas:hover, #california:hover, #new-mexico:hover, #washington:hover, #oregon:hover, #idaho:hover, #nevada:hover, #montana:hover, #wyoming:hover, #utah:hover, #arizona:hover {
+    opacity:1;
+    cursor:pointer;
+    transition:.5s ease-out;
+    -moz-transition:.5s ease-out;
+    -webkit-transition:.5s ease-out;
+}
+/*.window {
     position: absolute;
     background: rgba(255,255,255,.75);
     height:200px;
     width:200px;
     left:800px;
-    top:400px;
+    top:100px;
+    opacity:0;
+    z-index: 5;
+    color:lime;
 }
+.window:target {
+    opacity:1;
+    pointer-events: auto;
+}*/
