@@ -6,6 +6,8 @@ body {
     margin:0;
     padding:0;
     overflow-y: hidden; 
+    font-family: 'gotham-book';
+
 }
 .map-container {
     height:800px;
@@ -24,14 +26,16 @@ body {
 }
 .location {
     border-radius: 50%;
-    background: #FF6E75;
+/*    background: #FF6E75;
+*/    background: white;
     height:16px;
     width:16px;
     position: absolute;
     z-index: 15;
 }
 .ring {
-    border: 2px solid #FF6E75;
+/*    border: 2px solid #FF6E75;
+*/    border: 2px solid white;
     -webkit-border-radius: 30px;
     height: 22px;
     width: 22px;
@@ -46,7 +50,7 @@ body {
 @-webkit-keyframes pulsate {
     0% {-webkit-transform: scale(1, 1); opacity: 0.0;}
     50% {opacity: 1.0; }
-    100% {-webkit-transform: scale(2.5, 2.5); opacity: 0.0; border-color: #FFAEB2;}
+    100% {-webkit-transform: scale(2.5, 2.5); opacity: 0.0; /*border-color: #FFAEB2;*/}
 }
 /*--------------------------------------------------------------CITIES*/
 .houston {
@@ -173,7 +177,7 @@ body {
 }
 #oklahoma {
     left: 521px;
-    top: 426px;
+    top: 427px;
 }
 #minnesota {
     left: 644px;
@@ -183,11 +187,11 @@ body {
     left: 653px;
     top: 260px;
 }
-#arkansas {
+#missouri {
     left: 670px;
     top: 335px;
 }
-#missouri {
+#arkansas {
     left: 694px;
     top: 442px;
 }
@@ -302,8 +306,15 @@ body {
     left: 1060px;
     top: 316px;
 }
-
-#texas:hover, #california:hover, #new-mexico:hover, #washington:hover, #oregon:hover, #idaho:hover, #nevada:hover, #montana:hover, #wyoming:hover, #utah:hover, #arizona:hover, #colorado:hover, #north-dakota:hover, #south-dakota:hover, #nebraska:hover, #kansas:hover, #oklahoma:hover, #minnesota:hover, #iowa:hover, #missouri:hover, #arkansas:hover, #louisiana:hover, #wisconsin:hover, #illinois:hover, #kentucky:hover, #tennessee:hover, #mississippi:hover, #michigan:hover, #indiana:hover, #alabama:hover, #florida:hover, #ohio:hover, #west-virginia:hover, #north-carolina:hover, #south-carolina:hover, #georgia:hover, #new-york:hover, #pennsylvania:hover, #virginia:hover, #maryland:hover, #maine:hover, #new-hampshire:hover, #vermont:hover, #massachusetts:hover, #connecticut:hover, #rhode-island:hover, #new-jersey:hover, #delaware:hover {
+#hawaii {
+    left:374px;
+    top:647px;
+}
+#alaska {
+    left:108px;
+    top:554px;
+}
+#texas:hover, #california:hover, #new-mexico:hover, #washington:hover, #oregon:hover, #idaho:hover, #nevada:hover, #montana:hover, #wyoming:hover, #utah:hover, #arizona:hover, #colorado:hover, #north-dakota:hover, #south-dakota:hover, #nebraska:hover, #kansas:hover, #oklahoma:hover, #minnesota:hover, #iowa:hover, #missouri:hover, #arkansas:hover, #louisiana:hover, #wisconsin:hover, #illinois:hover, #kentucky:hover, #tennessee:hover, #mississippi:hover, #michigan:hover, #indiana:hover, #alabama:hover, #florida:hover, #ohio:hover, #west-virginia:hover, #north-carolina:hover, #south-carolina:hover, #georgia:hover, #new-york:hover, #pennsylvania:hover, #virginia:hover, #maryland:hover, #maine:hover, #new-hampshire:hover, #vermont:hover, #massachusetts:hover, #connecticut:hover, #rhode-island:hover, #new-jersey:hover, #delaware:hover, #hawaii:hover, #alaska:hover {
     opacity:1;
     cursor:pointer;
     transition:.5s ease-out;
@@ -311,6 +322,93 @@ body {
     -webkit-transition:.5s ease-out;
 }
 #heat-map {
+    top:50%;
+opacity: 0;
+    left:50.6%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+    z-index: -1;
+        transition:.5s ease-out;
+    -moz-transition:.5s ease-out;
+    -webkit-transition:.5s ease-out;
+}
+.temperature {
+    border-radius: 10%;
+    height:30px;
+    padding:5px;
+    width:auto;
+    position: absolute;
+    left:-100px;
+    top:600px; 
+    z-index: 19;
+    cursor: pointer;
+    background: #7B1817;
+    color:white;
+    transition:.5s ease-out;
+    -moz-transition:.5s ease-out;
+    -webkit-transition:.5s ease-out;
+}
+.temperature:hover {
+    background: #E54041;
+    transition:.5s ease-out;
+    -moz-transition:.5s ease-out;
+    -webkit-transition:.5s ease-out;
+}
+.temperature:hover ~ #heat-map {
+    z-index: 14;
+    opacity: 1;
+    cursor: pointer;
+    transition:.5s ease-out;
+    -moz-transition:.5s ease-out;
+    -webkit-transition:.5s ease-out;
+}
+.temperature:hover ~ #temp-key {
+    z-index: 14;
+    opacity: 1;
+    cursor: pointer;
+    transition:.5s ease-out;
+    -moz-transition:.5s ease-out;
+    -webkit-transition:.5s ease-out;
+}
+.humidity {
+    border-radius: 10%;
+    height:30px;
+    padding:5px;
+    width:auto;
+    position: absolute;
+    left:-100px;
+    top:560px; 
+    z-index: 19;
+    cursor: pointer;
+    background: #68680E;
+    color:white;
+    transition:.5s ease-out;
+    -moz-transition:.5s ease-out;
+    -webkit-transition:.5s ease-out;
+}
+.humidity:hover {
+    background: #C5E021;
+    transition:.5s ease-out;
+    -moz-transition:.5s ease-out;
+    -webkit-transition:.5s ease-out;
+}
+.humidity:hover ~ #humidity-map {
+    z-index: 14;
+    opacity: 1;
+    cursor: pointer;
+    transition:.5s ease-out;
+    -moz-transition:.5s ease-out;
+    -webkit-transition:.5s ease-out;
+}
+.humidity:hover ~ #hum-key {
+    z-index: 14;
+    opacity: 1;
+    cursor: pointer;
+    transition:.5s ease-out;
+    -moz-transition:.5s ease-out;
+    -webkit-transition:.5s ease-out;   
+}
+#humidity-map {
 /*    display:none;
 */    top:50%;
 opacity: 0;
@@ -322,23 +420,12 @@ opacity: 0;
     -moz-transition:.5s ease-out;
     -webkit-transition:.5s ease-out;
 }
-.temperature {
-    background-color: white;
-    border-radius: 50%;
-    height:30px;
-    width:auto;
+#hum-key, #temp-key {
+    top:490px;
+    left:1150px;
     position: absolute;
-    left:1200px;
-    top:600px; 
-    z-index: 19;
-        cursor: pointer;
-
-}
-.temperature:hover ~ #heat-map {
-/*    display:block;
-*/    z-index: 14;
-opacity: 1;
-    cursor: pointer;
+    z-index: -1;
+    opacity: 0;
     transition:.5s ease-out;
     -moz-transition:.5s ease-out;
     -webkit-transition:.5s ease-out;

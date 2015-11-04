@@ -7,20 +7,31 @@ body {
 	padding:0;*/
 	color:white;
 	letter-spacing: .5px;
+	font-family: 'gotham-book';
+	font-size: 21px;
 }
 p {
 	margin-top:0;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
+	font-size: 55px;
 	font-weight: normal;
 	font-family: 'gotham-black';
 }
 .container {
-	width:600px;
+	width:800px;
 	height:auto;
-	margin:0 auto;
+    position: absolute;
+    top: 43%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
 	text-align: center;
 	padding:20px;
 
 }
+img {
+	margin:20px 20px 40px 20px;
+/*	display: inline-block;
+*/}
