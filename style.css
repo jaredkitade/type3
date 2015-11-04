@@ -7,7 +7,23 @@ body {
     padding:0;
     overflow-y: hidden; 
     font-family: 'gotham-book';
-
+    color:white;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-size: 45px;
+    font-weight: normal;
+    font-family: 'gotham-black';
+}
+h1 {
+    position: absolute;
+    top: -10px;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    z-index: 55;
+    width: 1280px;
+    text-align: center;
 }
 .map-container {
     height:800px;
