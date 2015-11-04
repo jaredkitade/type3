@@ -1,0 +1,26 @@
+* {
+    box-sizing:border-box;
+}
+body {
+	background:black;
+/*	margin:0 auto;
+	padding:0;*/
+	color:white;
+	letter-spacing: .5px;
+}
+p {
+	margin-top:0;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	font-weight: normal;
+	font-family: 'gotham-black';
+}
+.container {
+	width:600px;
+	height:auto;
+	margin:0 auto;
+	text-align: center;
+	padding:20px;
+
+}

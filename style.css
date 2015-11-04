@@ -5,7 +5,7 @@ body {
     background: black;
     margin:0;
     padding:0;
-    overflow-y:hidden;
+    overflow-y: hidden; 
 }
 .map-container {
     height:800px;
@@ -28,7 +28,7 @@ body {
     height:16px;
     width:16px;
     position: absolute;
-    z-index: 10;
+    z-index: 15;
 }
 .ring {
     border: 2px solid white;
@@ -39,14 +39,14 @@ body {
     top:-3px;
     position: absolute;
     opacity: 0;
-    -webkit-animation: pulsate .75s ease-out;
+    -webkit-animation: pulsate .8s ease-out;
     -webkit-animation-iteration-count: infinite; 
-    z-index: 11;
+    z-index: 16;
 }
 @-webkit-keyframes pulsate {
     0% {-webkit-transform: scale(1, 1); opacity: 0.0;}
     50% {opacity: 1.0;}
-    100% {-webkit-transform: scale(2, 2); opacity: 0.0;}
+    100% {-webkit-transform: scale(2.5, 2.5); opacity: 0.0;}
 }
 /*--------------------------------------------------------------CITIES*/
 .houston {
@@ -57,20 +57,26 @@ body {
     left:1019px;
     top:687px;
 }
-/*.window {
-    opacity: 0;
-    width:350px;
-    height:400px;
-    position: absolute;
-    top:278px;
-    left:960px;
-    background: lime;
-    z-index: 8;
-    padding: 15px;
+.riverhead {
+    left:1105px;
+    top:270px;
 }
-#houston:hover .window {
-    opacity: 1;
-}*/
+.morgan-state {
+    left:1040px;
+    top:325px;
+}
+.camp-blanding {
+    left:968px;
+    top:585px;
+}
+.lamar {
+    left:705px;
+    top:458px;
+}
+.st-joseph {
+    left:1073px;
+    top:256px;
+}
 /*--------------------------------------------------------------STATES*/
 .state {
     position: absolute;
@@ -284,6 +290,14 @@ body {
     -moz-transition:.5s ease-out;
     -webkit-transition:.5s ease-out;
 }
+#heat-map {
+    display:none;
+    top:50%;
+    left:50.5%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+    z-index: 14;
+}
 .temperature {
     background-color: white;
     border-radius: 50%;
@@ -292,27 +306,14 @@ body {
     position: absolute;
     left:1200px;
     top:600px; 
-    z-index: 99;
+    z-index: 19;
+        cursor: pointer;
+
 }
-.temperature:hover ~ #texas {
-    opacity: 1;
+.temperature:hover ~ #heat-map {
+    display:block;
     cursor: pointer;
-    transition:.5s ease-out;
+/*    transition:.5s ease-out;
     -moz-transition:.5s ease-out;
-    -webkit-transition:.5s ease-out;
+    -webkit-transition:.5s ease-out;*/
 }
-/*.window {
-    position: absolute;
-    background: rgba(255,255,255,.75);
-    height:200px;
-    width:200px;
-    left:800px;
-    top:100px;
-    opacity:0;
-    z-index: 5;
-    color:lime;
-}
-.window:target {
-    opacity:1;
-    pointer-events: auto;
-}*/
