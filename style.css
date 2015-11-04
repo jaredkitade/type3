@@ -77,6 +77,26 @@ body {
     left:1073px;
     top:256px;
 }
+.lamar-sc {
+    left:990px;
+    top:468px;
+}
+.locust-grove {
+    left:910px;
+    top:497px;
+}
+.oleno {
+    left:957px;
+    top:579px;
+}
+.gurdon {
+    left:716px;
+    top:500px;
+}
+.pike {
+    left:800px;
+    top:300px;
+}
 /*--------------------------------------------------------------STATES*/
 .state {
     position: absolute;
